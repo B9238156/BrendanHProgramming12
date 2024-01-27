@@ -11,7 +11,7 @@ public class Planet {
         this.type = type;
     }
 
-    public Planet(String designation, double massKg, double orbitEarthYears, PlanetType type) {
+    public Planet(String designation, double massKg, double orbitEarthYears,PlanetType type) {
         this.designation = designation;
         this.massKg = massKg;
         this.orbitEarthYears = orbitEarthYears;
@@ -35,7 +35,7 @@ public class Planet {
 
     @Override
     public String toString(){
-        return "Designation: " + designation + "\tType: " + type;
+        return "Designation: " + designation + "\tType: " + type.pType;
     }
 
 }
