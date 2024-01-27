@@ -10,6 +10,11 @@ public class Cipher {
     public HashMap<Integer, Character> alphabet = new HashMap<>();
     public int shift;
 
+
+    /**
+     *
+     * @param shift
+     */
     public Cipher(int shift) {
         this.shift = shift;
         String alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
