@@ -4,7 +4,13 @@ public class Card {
     int value;
     Suit suit;
     boolean faceCard;
-public Card(int value, Suit suit) {
+
+    /**
+     *
+     * @param value
+     * @param suit
+     */
+    public Card(int value, Suit suit) {
     this.value = value;
     this.suit = suit;
     if (value > 10) {
