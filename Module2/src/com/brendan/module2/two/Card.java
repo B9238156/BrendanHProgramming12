@@ -6,7 +6,7 @@ public class Card {
     boolean faceCard;
 
     /**
-     * Checks if card is a face card
+     * Create card and set if card is a face card
      * @param value
      * @param suit
      */
