@@ -5,6 +5,12 @@ public class Card implements Comparable<Card> {
     int value;
     Suit suit;
     boolean faceCard;
+
+    /**
+     * Checks if card is a face card.
+     * @param value
+     * @param suit
+     */
     public Card(int value, Suit suit) {
         this.value = value;
         this.suit = suit;
@@ -15,6 +21,11 @@ public class Card implements Comparable<Card> {
         }
     }
 
+    /**
+     * Compares two cards together.
+     * @param c the object to be compared.
+     * @return
+     */
     @Override
     public int compareTo(Card c) {
         if(this.value > c.value){

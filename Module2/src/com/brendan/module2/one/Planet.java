@@ -11,6 +11,13 @@ public class Planet {
         this.type = type;
     }
 
+    /**
+     * Creat designation
+     * @param designation
+     * @param massKg
+     * @param orbitEarthYears
+     * @param type
+     */
     public Planet(String designation, double massKg, double orbitEarthYears,PlanetType type) {
         this.designation = designation;
         this.massKg = massKg;
@@ -24,6 +31,11 @@ public class Planet {
         return designation.hashCode();
     }
 
+    /**
+     * Create equals
+     * @param obj
+     * @return
+     */
     @Override
     public boolean equals(Object obj) {
         if(obj instanceof Planet){

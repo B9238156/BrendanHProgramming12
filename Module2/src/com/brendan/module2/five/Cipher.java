@@ -12,7 +12,7 @@ public class Cipher {
 
 
     /**
-     *
+     * Calculates shift in cipher.
      * @param shift
      */
     public Cipher(int shift) {
@@ -23,6 +23,11 @@ public class Cipher {
         }
     }
 
+    /**
+     * Encrypts Message.
+     * @param message
+     * @return
+     */
     public String encrypt(String message) {
 
         String encryptedMessage = "";
@@ -52,6 +57,11 @@ public class Cipher {
         return encryptedMessage;
     }
 
+    /**
+     * Decyrpt's message.
+     * @param message
+     * @return
+     */
     public String decrypt(String message) {
 
         String encryptedMessage = "";

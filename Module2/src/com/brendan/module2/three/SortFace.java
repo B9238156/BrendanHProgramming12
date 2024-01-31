@@ -4,6 +4,12 @@ import java.util.Comparator;
 
 public class SortFace implements Comparator<Card>{
 
+    /**
+     * Sorts cards by face
+     * @param c1 the first object to be compared.
+     * @param c2 the second object to be compared.
+     * @return
+     */
     @Override
     public int compare(Card c1, Card c2) {
         if(c1.faceCard && !c2.faceCard) {

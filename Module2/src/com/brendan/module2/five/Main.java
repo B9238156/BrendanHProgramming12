@@ -3,7 +3,7 @@ import java.util.Map;
 
 public class Main {
     /**
-     *
+     * Calls cipher method and prints out results.
      * @param args
      */
     public static void main(String[] args) {
