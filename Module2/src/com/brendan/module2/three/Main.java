@@ -2,8 +2,6 @@ package com.brendan.module2.three;
 import java.util.Collections;
 import java.util.LinkedList;
 
-
-
 public class Main { public static void main(String[] args) {
         LinkedList<Card> deck = new LinkedList<>();
         LinkedList<Card> myCards = new LinkedList<>();
@@ -15,15 +13,8 @@ public class Main { public static void main(String[] args) {
             deck.add(new Card(c, Suit.DIAMONDS));
         }
 
-
         Collections.sort(deck);
 
-       /* System.out.println("Sorted by Face Value");
-
-        for(int i = 0; i < deck.size(); i++) {
-            System.out.println(deck.get(i).toString());
-        }
-        */
         System.out.println("Sorted by Suit");
         SortSuits ss = new SortSuits();
         Collections.sort(deck,ss);
@@ -37,8 +28,5 @@ public class Main { public static void main(String[] args) {
         for(Card card : deck){
             System.out.println(card);
         }
-
-
-
     }
 }
