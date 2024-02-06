@@ -12,7 +12,7 @@ public class Planet {
     }
 
     /**
-     * Creat designation
+     * Create designation
      * @param designation
      * @param massKg
      * @param orbitEarthYears

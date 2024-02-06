@@ -12,7 +12,7 @@ public class Cipher {
 
 
     /**
-     * Calculates shift in cipher.
+     * Calculates shift in Caesar cipher. e(x) = (x + k) (mod 26)
      * @param shift
      */
     public Cipher(int shift) {
@@ -24,7 +24,7 @@ public class Cipher {
     }
 
     /**
-     * Encrypts Message.
+     * Encrypts Message. e(x) = (x + k) (mod 26)
      * @param message
      * @return
      */
@@ -58,7 +58,7 @@ public class Cipher {
     }
 
     /**
-     * Decyrpt's message.
+     * Decyrpt's message.e(x) = (x - k) (mod 26)
      * @param message
      * @return
      */
