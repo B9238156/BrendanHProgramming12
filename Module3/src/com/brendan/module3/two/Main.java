@@ -2,7 +2,7 @@ package com.brendan.module3.two;
 
 public class Main {
     public static void one(int n){
-        if (n == 7){
+        if (n < 9){
             return;
         }
         System.out.println(n);
@@ -17,12 +17,21 @@ public class Main {
         two(n * 2);
     }
 
+    public static void three(int n1, int n2){
+        if(n1 > 68){
+            return;
+        }
+        System.out.println(n1);
+        three(n2, n1 + n2);
+    }
 
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         System.out.println("*** one ***");
         one(25);
         System.out.println("*** two ***");
         two(1);
         System.out.println("*** three ***");
+        three(2, 2);
     }
 }

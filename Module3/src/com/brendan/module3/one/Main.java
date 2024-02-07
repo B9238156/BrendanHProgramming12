@@ -14,6 +14,7 @@ public class Main {
         if(n == 1 || n == 2){
             return 1;
         }
+        System.out.println(n);
         return fibonacci(n -1) + fibonacci(n - 2);
     }
 
