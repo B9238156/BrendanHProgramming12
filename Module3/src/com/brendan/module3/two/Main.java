@@ -25,6 +25,14 @@ public class Main {
         three(n2, n1 + n2);
     }
 
+    public static void four(int n1, int n2){
+        if(n1 > 102){
+            return;
+        }
+        System.out.println(n1);
+        four(n2, n1 + n2);
+    }
+
 
     public static void main(String[] args) {
         System.out.println("*** one ***");
@@ -33,5 +41,7 @@ public class Main {
         two(1);
         System.out.println("*** three ***");
         three(2, 2);
+        System.out.println("*** four ***");
+        four(3,3);
     }
 }
