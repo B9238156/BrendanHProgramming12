@@ -33,6 +33,14 @@ public class Main {
         four(n2, n1 + n2);
     }
 
+    public static void five(int n1, int n2){
+        if (n1 > 362880){
+            return;
+        }
+        System.out.println(n1);
+        five(n1 * n2, n2 + 1);
+    }
+
 
     public static void main(String[] args) {
         System.out.println("*** one ***");
@@ -43,5 +51,7 @@ public class Main {
         three(2, 2);
         System.out.println("*** four ***");
         four(3,3);
+        System.out.println("*** five ***");
+        five(1,1);
     }
 }
