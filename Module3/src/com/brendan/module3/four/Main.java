@@ -37,6 +37,7 @@ public class Main {
 
     public static void main(String[] args) {
         players = new ArrayList<>();
+        ArrayList<PlayerBattingStats> result = new ArrayList<>();
         try {
             parseCSVData(new File("C:\\GitHub\\BrendanHProgramming12\\Module3\\PlayerData.csv"));
         } catch (FileNotFoundException e) {
@@ -45,6 +46,22 @@ public class Main {
         for (PlayerBattingStats player : players) {
             System.out.println(player);
         }
+        System.out.println("By runs ");
+        result = PlayerSorter.sort(players, PlayerSorter.RUNS);
+        for (PlayerBattingStats player : result) {
+            System.out.println(player);
+        }
+        System.out.println("By games ");
+        result = PlayerSorter.sort(players, PlayerSorter.GAMESPLAYED);
+        for (PlayerBattingStats player : result) {
+            System.out.println(player);
+        }
+        System.out.println("By atbats ");
+        result = PlayerSorter.sort(players, PlayerSorter.ATBATS);
+        for (PlayerBattingStats player : result) {
+            System.out.println(player);
+        }
+
     }
 
 }

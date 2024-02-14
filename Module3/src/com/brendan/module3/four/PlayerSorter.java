@@ -27,8 +27,137 @@ public class PlayerSorter {
      * @return An ArrayList that is sorted according to the users specification.
      */
     public static ArrayList<PlayerBattingStats> sort(ArrayList<PlayerBattingStats> list, int sortType) {
-        //TODO: Your code here
-        return null;
+        ArrayList<PlayerBattingStats> result = new ArrayList<>();
+
+        if(list.size() <= 1){
+            return list;
+        }
+
+        int midpoint = list.size() / 2;
+
+        ArrayList<PlayerBattingStats> ls = new ArrayList<>();
+        ArrayList<PlayerBattingStats> rs = new ArrayList<>();
+
+        for (int i = 0; i < midpoint; i++){
+            ls.add(list.get(i));
+        }
+        for (int i = midpoint; i < list.size(); i++){
+            rs.add(list.get(i));
+        }
+
+        ls = sort(ls, sortType);
+        rs = sort(rs, sortType);
+        if(sortType == PlayerSorter.RUNS){
+            result = mergeRuns(ls,rs);
+        } else if (sortType == PlayerSorter.GAMESPLAYED) {
+            result = mergeGames(ls,rs);
+        } else if (sortType == PlayerSorter.ATBATS) {
+            result = mergeAtBats(ls,rs);
+
+        }
+        return result;
+    }
+
+    public static ArrayList<PlayerBattingStats> mergeRuns(ArrayList<PlayerBattingStats> ls, ArrayList<PlayerBattingStats> rs) {
+        int leftPointer = 0, rightPointer = 0, resultPointer = 0;
+        ArrayList<PlayerBattingStats> result = new ArrayList<>();
+
+        // While there are items in either array...
+        while (leftPointer < ls.size() || rightPointer < rs.size()){
+
+            if (leftPointer < ls.size() && rightPointer < rs.size()){
+                if (ls.get(leftPointer).getRuns() < rs.get(rightPointer).getRuns()){
+                    result.add(ls.get(leftPointer));
+                    resultPointer++;
+                    leftPointer++;
+                }
+                else {
+                    result.add(rs.get(rightPointer));
+                    resultPointer++;
+                    rightPointer++;
+                }
+            }
+
+            else if (leftPointer < ls.size()) {
+                    result.add(ls.get(leftPointer));
+                    resultPointer++;
+                    leftPointer++;
+            }
+            else if (rightPointer < rs.size()) {
+                result.add(rs.get(rightPointer));
+                resultPointer++;
+                rightPointer++;
+            }
+        }
+        return result;
+    }
+
+    public static ArrayList<PlayerBattingStats> mergeGames(ArrayList<PlayerBattingStats> ls, ArrayList<PlayerBattingStats> rs) {
+        int leftPointer = 0, rightPointer = 0, resultPointer = 0;
+        ArrayList<PlayerBattingStats> result = new ArrayList<>();
+
+        // While there are items in either array...
+        while (leftPointer < ls.size() || rightPointer < rs.size()){
+
+            if (leftPointer < ls.size() && rightPointer < rs.size()){
+                if (ls.get(leftPointer).getGames() < rs.get(rightPointer).getGames()){
+                    result.add(ls.get(leftPointer));
+                    resultPointer++;
+                    leftPointer++;
+                }
+                else {
+                    result.add(rs.get(rightPointer));
+                    resultPointer++;
+                    rightPointer++;
+                }
+            }
+
+            else if (leftPointer < ls.size()) {
+                result.add(ls.get(leftPointer));
+                resultPointer++;
+                leftPointer++;
+            }
+            else if (rightPointer < rs.size()) {
+                result.add(rs.get(rightPointer));
+                resultPointer++;
+                rightPointer++;
+            }
+        }
+        return result;
+    }
+
+    public static ArrayList<PlayerBattingStats> mergeAtBats(ArrayList<PlayerBattingStats> ls, ArrayList<PlayerBattingStats> rs) {
+        int leftPointer = 0, rightPointer = 0, resultPointer = 0;
+        ArrayList<PlayerBattingStats> result = new ArrayList<>();
+
+        // While there are items in either array...
+        while (leftPointer < ls.size() || rightPointer < rs.size()){
+
+            if (leftPointer < ls.size() && rightPointer < rs.size()){
+                if (ls.get(leftPointer).getAtBats() < rs.get(rightPointer).getAtBats()){
+                    result.add(ls.get(leftPointer));
+                    resultPointer++;
+                    leftPointer++;
+                }
+                else {
+                    result.add(rs.get(rightPointer));
+                    resultPointer++;
+                    rightPointer++;
+                }
+            }
+
+            else if (leftPointer < ls.size()) {
+                result.add(ls.get(leftPointer));
+                resultPointer++;
+                leftPointer++;
+            }
+            else if (rightPointer < rs.size()) {
+                result.add(rs.get(rightPointer));
+                resultPointer++;
+                rightPointer++;
+            }
+        }
+        return result;
     }
 
 }
