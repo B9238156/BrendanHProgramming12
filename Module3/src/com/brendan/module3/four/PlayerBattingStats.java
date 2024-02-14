@@ -24,6 +24,26 @@ public class PlayerBattingStats {
     private int homeRuns;
     private int rbi;
 
+    private double percentRuns;
+
+    public double getPercentRuns() {
+        return percentRuns;
+    }
+
+    public void setPercentRuns(double percentRuns) {
+        this.percentRuns = percentRuns;
+    }
+
+    public double getPercentOnBase() {
+        return percentOnBase;
+    }
+
+    public void setPercentOnBase(double percentOnBase) {
+        this.percentOnBase = percentOnBase;
+    }
+
+    private double percentOnBase;
+
     public PlayerBattingStats(String name, String team, int games, int atBats, int runs, int hits, int doubles, int triples, int homeRuns, int rbi) {
         this.name = name;
         this.team = team;
@@ -35,6 +55,8 @@ public class PlayerBattingStats {
         this.triples = triples;
         this.homeRuns = homeRuns;
         this.rbi = rbi;
+        this.percentRuns = runs / atBats * 100;
+        this.percentOnBase = (hits + doubles + triples) / atBats * 100;
     }
 
     public String getName() {
@@ -90,6 +112,8 @@ public class PlayerBattingStats {
                 ", triples=" + triples +
                 ", homeRuns=" + homeRuns +
                 ", rbi=" + rbi +
+                ", % runs" + percentRuns +
+                ", % onBase" + percentOnBase+
                 '}';
     }
 }
