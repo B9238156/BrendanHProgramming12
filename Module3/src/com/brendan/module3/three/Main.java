@@ -10,6 +10,11 @@ import java.util.Scanner;
 public class Main {
     public static ArrayList<Node> graph;
 
+    /**
+     * Complete BFS by creating node from graph, adding the key from the node to the queue, creating a list from values from the nodes and running BFS.
+     * @param args
+     * @throws FileNotFoundException
+     */
     public static void main(String[] args) throws FileNotFoundException {
         LinkedList<Integer> queue = new LinkedList<>();
         setupTree();
@@ -23,6 +28,10 @@ public class Main {
         System.out.println(queue);
     }
 
+    /**
+     * Run BFS Algorithm and output queue using tree.txt as the input.
+     * @param queue
+     */
     private static void BFS(LinkedList<Integer> queue) {
         //Your code here.  Feel free to modify signature or add helper functions.
         LinkedList<Integer> tempQueue = (LinkedList<Integer>) queue.clone();
