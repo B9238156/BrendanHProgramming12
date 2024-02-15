@@ -46,22 +46,31 @@ public class Main {
         for (PlayerBattingStats player : players) {
             System.out.println(player);
         }
-        System.out.println("By runs ");
+        System.out.println("\n By runs= ");
         result = PlayerSorter.sort(players, PlayerSorter.RUNS);
         for (PlayerBattingStats player : result) {
             System.out.println(player);
         }
-        System.out.println("By games ");
+        System.out.println("\n By games= ");
         result = PlayerSorter.sort(players, PlayerSorter.GAMESPLAYED);
         for (PlayerBattingStats player : result) {
             System.out.println(player);
         }
-        System.out.println("By atbats ");
+        System.out.println("\nBy at bats= ");
         result = PlayerSorter.sort(players, PlayerSorter.ATBATS);
         for (PlayerBattingStats player : result) {
             System.out.println(player);
         }
-
+        System.out.println("\nBy percent runs= ");
+        result = PlayerSorter.sort(players, PlayerSorter.PERCENTRUNS);
+        for (PlayerBattingStats player : result) {
+            System.out.println(player);
+        }
+        System.out.println("\nBy percent on base= ");
+        result = PlayerSorter.sort(players, PlayerSorter.PERCENTONBASE);
+        for (PlayerBattingStats player : result) {
+            System.out.println(player);
+        }
     }
 
 }

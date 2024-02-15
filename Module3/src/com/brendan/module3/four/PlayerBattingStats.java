@@ -55,8 +55,8 @@ public class PlayerBattingStats {
         this.triples = triples;
         this.homeRuns = homeRuns;
         this.rbi = rbi;
-        this.percentRuns = runs / atBats * 100;
-        this.percentOnBase = (hits + doubles + triples) / atBats * 100;
+        this.percentRuns = (double)runs / (double)atBats * 100;
+        this.percentOnBase = ((double)hits + (double)doubles + (double)triples) / (double)atBats * 100;
     }
 
     public String getName() {
@@ -112,8 +112,8 @@ public class PlayerBattingStats {
                 ", triples=" + triples +
                 ", homeRuns=" + homeRuns +
                 ", rbi=" + rbi +
-                ", % runs" + percentRuns +
-                ", % onBase" + percentOnBase+
+                ", % runs=" + String.format("%.2f", percentRuns)+
+                ", % onBase=" + String.format("%.2f", percentOnBase)+
                 '}';
     }
 }

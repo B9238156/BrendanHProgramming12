@@ -53,7 +53,10 @@ public class PlayerSorter {
             result = mergeGames(ls,rs);
         } else if (sortType == PlayerSorter.ATBATS) {
             result = mergeAtBats(ls,rs);
-
+        } else if (sortType == PlayerSorter.PERCENTRUNS) {
+            result = mergePercentRuns(ls,rs);
+        } else if (sortType == PlayerSorter.PERCENTONBASE) {
+            result = mergeBasePercentage(ls, rs);
         }
         return result;
     }
@@ -66,7 +69,7 @@ public class PlayerSorter {
         while (leftPointer < ls.size() || rightPointer < rs.size()){
 
             if (leftPointer < ls.size() && rightPointer < rs.size()){
-                if (ls.get(leftPointer).getRuns() < rs.get(rightPointer).getRuns()){
+                if (ls.get(leftPointer).getRuns() > rs.get(rightPointer).getRuns()){
                     result.add(ls.get(leftPointer));
                     resultPointer++;
                     leftPointer++;
@@ -100,7 +103,7 @@ public class PlayerSorter {
         while (leftPointer < ls.size() || rightPointer < rs.size()){
 
             if (leftPointer < ls.size() && rightPointer < rs.size()){
-                if (ls.get(leftPointer).getGames() < rs.get(rightPointer).getGames()){
+                if (ls.get(leftPointer).getGames() > rs.get(rightPointer).getGames()){
                     result.add(ls.get(leftPointer));
                     resultPointer++;
                     leftPointer++;
@@ -134,7 +137,75 @@ public class PlayerSorter {
         while (leftPointer < ls.size() || rightPointer < rs.size()){
 
             if (leftPointer < ls.size() && rightPointer < rs.size()){
-                if (ls.get(leftPointer).getAtBats() < rs.get(rightPointer).getAtBats()){
+                if (ls.get(leftPointer).getAtBats() > rs.get(rightPointer).getAtBats()){
+                    result.add(ls.get(leftPointer));
+                    resultPointer++;
+                    leftPointer++;
+                }
+                else {
+                    result.add(rs.get(rightPointer));
+                    resultPointer++;
+                    rightPointer++;
+                }
+            }
+
+            else if (leftPointer < ls.size()) {
+                result.add(ls.get(leftPointer));
+                resultPointer++;
+                leftPointer++;
+            }
+            else if (rightPointer < rs.size()) {
+                result.add(rs.get(rightPointer));
+                resultPointer++;
+                rightPointer++;
+            }
+        }
+        return result;
+    }
+
+    public static ArrayList<PlayerBattingStats> mergePercentRuns(ArrayList<PlayerBattingStats> ls, ArrayList<PlayerBattingStats> rs) {
+        int leftPointer = 0, rightPointer = 0, resultPointer = 0;
+        ArrayList<PlayerBattingStats> result = new ArrayList<>();
+
+        // While there are items in either array...
+        while (leftPointer < ls.size() || rightPointer < rs.size()){
+
+            if (leftPointer < ls.size() && rightPointer < rs.size()){
+                if (ls.get(leftPointer).getPercentRuns() > rs.get(rightPointer).getPercentRuns()){
+                    result.add(ls.get(leftPointer));
+                    resultPointer++;
+                    leftPointer++;
+                }
+                else {
+                    result.add(rs.get(rightPointer));
+                    resultPointer++;
+                    rightPointer++;
+                }
+            }
+
+            else if (leftPointer < ls.size()) {
+                result.add(ls.get(leftPointer));
+                resultPointer++;
+                leftPointer++;
+            }
+            else if (rightPointer < rs.size()) {
+                result.add(rs.get(rightPointer));
+                resultPointer++;
+                rightPointer++;
+            }
+        }
+        return result;
+    }
+
+    public static ArrayList<PlayerBattingStats> mergeBasePercentage(ArrayList<PlayerBattingStats> ls, ArrayList<PlayerBattingStats> rs) {
+        int leftPointer = 0, rightPointer = 0, resultPointer = 0;
+        ArrayList<PlayerBattingStats> result = new ArrayList<>();
+
+        // While there are items in either array...
+        while (leftPointer < ls.size() || rightPointer < rs.size()){
+
+            if (leftPointer < ls.size() && rightPointer < rs.size()){
+                if (ls.get(leftPointer).getPercentOnBase() > rs.get(rightPointer).getPercentOnBase()){
                     result.add(ls.get(leftPointer));
                     resultPointer++;
                     leftPointer++;
