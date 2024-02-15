@@ -38,6 +38,11 @@ public class Main {
 
     }
 
+    /**
+     * Create a new array list for results and then create and write that info to BattingStats.txt for each stat
+     * @param args
+     * @throws IOException
+     */
     public static void main(String[] args) throws IOException {
         players = new ArrayList<>();
         ArrayList<PlayerBattingStats> result = new ArrayList<>();

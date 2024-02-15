@@ -16,6 +16,8 @@ public class PlayerSorter {
     public static int PERCENTONBASE = 4; // Calculated by (hits + doubles + triples) / atBats
 
     /**
+     * Fetched from sorter.
+     *
      * This method is an interface that allows the sorting of a player given based on
      * certain criteria.  There are 5 options to sort a player which are by Games played,
      * at bats, runs, percent runs, percent on base.
@@ -197,6 +199,13 @@ public class PlayerSorter {
         return result;
     }
 
+
+    /**
+     * Changed compare to sort in descending order.
+     * @param ls
+     * @param rs
+     * @return
+     */
     public static ArrayList<PlayerBattingStats> mergeBasePercentage(ArrayList<PlayerBattingStats> ls, ArrayList<PlayerBattingStats> rs) {
         int leftPointer = 0, rightPointer = 0, resultPointer = 0;
         ArrayList<PlayerBattingStats> result = new ArrayList<>();
