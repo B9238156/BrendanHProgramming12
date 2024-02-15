@@ -4,6 +4,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.IOException;
+import java.io.PrintStream;
+
 
 public class Main {
     public static ArrayList<PlayerBattingStats> players;
@@ -35,7 +38,7 @@ public class Main {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         players = new ArrayList<>();
         ArrayList<PlayerBattingStats> result = new ArrayList<>();
         try {
@@ -46,6 +49,12 @@ public class Main {
         for (PlayerBattingStats player : players) {
             System.out.println(player);
         }
+
+        File outputFile = new File("BattingStats.txt");
+
+        PrintStream stream = new PrintStream(outputFile);
+        System.setOut(stream);
+
         System.out.println("\n By runs= ");
         result = PlayerSorter.sort(players, PlayerSorter.RUNS);
         for (PlayerBattingStats player : result) {
