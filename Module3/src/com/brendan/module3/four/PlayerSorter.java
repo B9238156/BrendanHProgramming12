@@ -63,6 +63,12 @@ public class PlayerSorter {
         return result;
     }
 
+    /**
+     * Changed compare to sort in descending order by reversing compare signs.
+     * @param ls
+     * @param rs
+     * @return
+     */
     public static ArrayList<PlayerBattingStats> mergeRuns(ArrayList<PlayerBattingStats> ls, ArrayList<PlayerBattingStats> rs) {
         int leftPointer = 0, rightPointer = 0, resultPointer = 0;
         ArrayList<PlayerBattingStats> result = new ArrayList<>();
@@ -97,6 +103,12 @@ public class PlayerSorter {
         return result;
     }
 
+    /**
+     * Changed compare to sort in descending order by reversing compare signs.
+     * @param ls
+     * @param rs
+     * @return
+     */
     public static ArrayList<PlayerBattingStats> mergeGames(ArrayList<PlayerBattingStats> ls, ArrayList<PlayerBattingStats> rs) {
         int leftPointer = 0, rightPointer = 0, resultPointer = 0;
         ArrayList<PlayerBattingStats> result = new ArrayList<>();
@@ -131,6 +143,12 @@ public class PlayerSorter {
         return result;
     }
 
+    /**
+     * Changed compare to sort in descending order by reversing compare signs.
+     * @param ls
+     * @param rs
+     * @return
+     */
     public static ArrayList<PlayerBattingStats> mergeAtBats(ArrayList<PlayerBattingStats> ls, ArrayList<PlayerBattingStats> rs) {
         int leftPointer = 0, rightPointer = 0, resultPointer = 0;
         ArrayList<PlayerBattingStats> result = new ArrayList<>();
@@ -165,6 +183,12 @@ public class PlayerSorter {
         return result;
     }
 
+    /**
+     * Changed compare to sort in descending order by reversing compare signs.
+     * @param ls
+     * @param rs
+     * @return
+     */
     public static ArrayList<PlayerBattingStats> mergePercentRuns(ArrayList<PlayerBattingStats> ls, ArrayList<PlayerBattingStats> rs) {
         int leftPointer = 0, rightPointer = 0, resultPointer = 0;
         ArrayList<PlayerBattingStats> result = new ArrayList<>();
@@ -201,7 +225,7 @@ public class PlayerSorter {
 
 
     /**
-     * Changed compare to sort in descending order.
+     * Changed compare to sort in descending order by reversing compare signs.
      * @param ls
      * @param rs
      * @return

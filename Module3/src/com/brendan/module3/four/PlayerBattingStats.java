@@ -44,6 +44,21 @@ public class PlayerBattingStats {
 
     private double percentOnBase;
 
+    /**
+     *
+     * @param name = Name of Player
+     * @param team = Team Player is on
+     * @param games = Number of games played by player
+     * @param atBats = Number of at bats by player
+     * @param runs = Number of runs drove in by player
+     * @param hits = NUmber of hits by player
+     * @param doubles = Number of doubles
+     * @param triples = Number of triples
+     * @param homeRuns = Number of home runs
+     * @param rbi = Number of rbis
+     * percentRuns = Percentage of runs by player (Expressed in double to correctly calculate a percentage with decimals.)
+     * percentOnBase = Percentage on base by player (Expressed in double to correctly calculate a percentage with decimals.)
+     */
     public PlayerBattingStats(String name, String team, int games, int atBats, int runs, int hits, int doubles, int triples, int homeRuns, int rbi) {
         this.name = name;
         this.team = team;
