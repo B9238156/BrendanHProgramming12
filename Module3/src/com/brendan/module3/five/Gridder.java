@@ -5,6 +5,7 @@ import flanagan.io.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Random;
 
 
 public class Gridder extends JFrame
@@ -679,33 +680,79 @@ public class Gridder extends JFrame
     }//GEN-LAST:event_jSliderDelayStateChanged
 
     private void jButton1ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        System.out.println("1");
+        for(int i = 0; i < 100; i++){ // To Do: do we need to check for duplicate random numbers
+            Random randX = new Random();
+            int randXInt = randX.nextInt(99);
+
+            Random randY = new Random();
+            int randYInt = randY.nextInt(99);
+
+            grid[randXInt][randYInt] = 1;
+        }
         draw();
+
     }//GEN-LAST:event_jButton1ActionPerformed
     private void jButton2ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        System.out.println("2");
+        Random randC = new Random();
+        int randCInt = randC.nextInt(99);
+
+        for(int r = 0; r < gridCount; r++){
+
+            grid[randCInt][r] = 1;
+        }
+        draw();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        System.out.println("3");
+        clearGrid(); // Clear grid so only have to draw whites
+        for(int r = 0; r < gridCount / 2; r++){
+            for(int c = 0; c < gridCount; c++){
+                grid[c][r] = 1;
+            }
+        }
         draw();
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
 
     private void jButton4ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        System.out.println("4");
+        int wCount = 0;
+        for(int r = 0; r < gridCount; r++){
+            for(int c = 0; c < gridCount; c++){
+                if (grid[c][r] == 1){
+                    wCount++;
+                }
+            }
+        }
+        textInfo.setText("Total white dots = " + Integer.toString(wCount));
 
         draw();
     }//GEN-LAST:event_jButton11ActionPerformed
     private void jButton5ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        System.out.println("5");
-
+        clearGrid();
+        int c = 0;
+        for(int r = 0; r < gridCount; r++){
+           grid[c][r] = 1;
+           c++;
+        }
+        int rO = 99;
+        for(int cO = 0; cO < gridCount; cO++){
+            grid[cO][rO] = 1;
+            rO--;
+        }
         draw();
     }//GEN-LAST:event_jButton11ActionPerformed
     private void jButton6ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        System.out.println("6");
-
+        int c = 0;
+        for(int i = 0; i < gridCount; i++){
+            for(int r = 0; r < gridCount; r++){
+                if (grid[c][r] == 1){
+                    grid[c][r] = 0;
+                }
+                else grid[c][r] = 1;
+            }
+            c++;
+        }
         draw();
     }//GEN-LAST:event_jButton11ActionPerformed
     private void jButton7ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
