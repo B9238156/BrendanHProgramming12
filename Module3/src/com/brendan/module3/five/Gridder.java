@@ -756,13 +756,85 @@ public class Gridder extends JFrame
         draw();
     }//GEN-LAST:event_jButton11ActionPerformed
     private void jButton7ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        System.out.println("7");
+        //create temp
+        int[][] tempGrid = new int[gridCount][gridCount];
+        int touchCount = 0;
 
+        for(int r = 0; r < gridCount; r++){
+            for(int c = 0; c < gridCount; c++){
+                if(grid[c][r] == 0){
+                    if (c != 4) {
+                        if (grid[c + 1][r] == 1) {
+                            touchCount++;
+                        }
+                    }
+
+                    if (c != 0) {
+                        if (grid[c - 1][r] == 1) {
+                            touchCount++;
+                        }
+                    }
+
+                    if (r != 4) {
+                        if (grid[c][r + 1] == 1) {
+                            touchCount++;
+                        }
+                    }
+
+                    if (r != 0) {
+                        if (grid[c][r - 1] == 1) {
+                            touchCount++;
+                        }
+                    }
+                    if (c != 0 && r != 0) {
+                        if (grid[c -1 ][r - 1] == 1){
+                            touchCount++;
+                        }
+                    }
+
+                    if (c != 4 && r != 4) {
+                        if (grid[c + 1][r + 1] == 1) {
+                            touchCount++;
+                        }
+                    }
+                    if (c != 4 && r != 0) {
+                        if (grid[c + 1][r - 1] == 1) {
+                            touchCount++;
+                        }
+                    }
+                    if (c != 0 && r != 4) {
+                        if (grid[c - 1][r + 1] == 1) {
+                            touchCount++;
+                        }
+                    }
+                    if (touchCount >= 2){
+                        tempGrid[c][r] = 1;
+                    }
+                    touchCount = 0;
+                }
+            }
+        }
+        for(int r = 0; r < gridCount; r++){
+            for(int c = 0; c < gridCount; c++){
+                if (tempGrid[c][r] == 1){
+                    grid[c][r] = 1;
+                }
+            }
+        }
         draw();
     }//GEN-LAST:event_jButton11ActionPerformed
     private void jButton8ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        System.out.println("8");
+        //create temp
+        int[][] tempGrid = new int[gridCount][gridCount];
 
+        for(int r = 0; r < gridCount; r++){
+            for(int c = 0; c < gridCount; c++){
+               if (c == 0){
+                   tempGrid[99][r] = grid[0][r];
+               } else tempGrid[c - 1][r] = grid[c][r];
+            }
+        }
+        grid=tempGrid;
         draw();
     }//GEN-LAST:event_jButton11ActionPerformed
     private void jButton9ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
@@ -782,8 +854,8 @@ public class Gridder extends JFrame
         draw();
     }//GEN-LAST:event_jButton11ActionPerformed
     private void jButton12ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        // TODO add your handling code here:
-        System.out.println("12");
+        grid[1][2] = 1;
+        draw();
     }//GEN-LAST:event_jButton12ActionPerformed
 
 
