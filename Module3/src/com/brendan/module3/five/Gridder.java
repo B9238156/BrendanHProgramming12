@@ -763,7 +763,7 @@ public class Gridder extends JFrame
         for(int r = 0; r < gridCount; r++){
             for(int c = 0; c < gridCount; c++){
                 if(grid[c][r] == 0){
-                    if (c != 4) {
+                    if (c != 99) {
                         if (grid[c + 1][r] == 1) {
                             touchCount++;
                         }
@@ -775,7 +775,7 @@ public class Gridder extends JFrame
                         }
                     }
 
-                    if (r != 4) {
+                    if (r != 99) {
                         if (grid[c][r + 1] == 1) {
                             touchCount++;
                         }
@@ -792,17 +792,17 @@ public class Gridder extends JFrame
                         }
                     }
 
-                    if (c != 4 && r != 4) {
+                    if (c != 99 && r != 99) {
                         if (grid[c + 1][r + 1] == 1) {
                             touchCount++;
                         }
                     }
-                    if (c != 4 && r != 0) {
+                    if (c != 99 && r != 0) {
                         if (grid[c + 1][r - 1] == 1) {
                             touchCount++;
                         }
                     }
-                    if (c != 0 && r != 4) {
+                    if (c != 0 && r != 99) {
                         if (grid[c - 1][r + 1] == 1) {
                             touchCount++;
                         }
