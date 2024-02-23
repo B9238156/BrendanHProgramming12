@@ -838,8 +838,15 @@ public class Gridder extends JFrame
         draw();
     }//GEN-LAST:event_jButton11ActionPerformed
     private void jButton9ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        System.out.println("9");
-
+        //90° clockwise rotation: (x,y) becomes (y,−x)
+        int[][] tempGrid = new int[gridCount][gridCount];
+        for(int r = 0; r < gridCount; r++){
+            for(int c = 0; c < gridCount; c++) {
+//Because the start point is on the left and not centered you have to add the gird count to make it positive again.
+                tempGrid[c][r] = grid[r][c * -1 + (gridCount -1)];
+            }
+        }
+        grid=tempGrid;
         draw();
     }//GEN-LAST:event_jButton11ActionPerformed
 
