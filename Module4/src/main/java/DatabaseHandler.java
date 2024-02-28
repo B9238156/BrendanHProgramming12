@@ -20,28 +20,10 @@ public class DatabaseHandler {
         }
     }
 
-    private void createTable() {
-        String TABLE_NAME = "MEMBER";
-        try {
-            stmt = conn.createStatement();
-            DatabaseMetaData dmn = conn.getMetaData();
-            ResultSet tables = dmn.getTables(null, null, TABLE_NAME, null);
-            if (tables.next()) {
-                System.out.println("Table " + TABLE_NAME + " exists");
-            } else {
-                String statement = "CREATE TABLE " + TABLE_NAME + " ("
-                        + "id varchar(200) primary key, \n"
-                        + "name varchar(200), \n"
-                        + "email varchar(200), \n"
-                        + "nickname varchar(200))";
-                System.out.println(statement);
-                stmt.execute(statement);
-            }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-    }
 
+    /**
+     * Create Table "PlayerStats" to store data in, catch IOException
+     */
     private void createPlayerTable() {
         String TABLE_NAME = "PLAYERSTATS";
         //Name,Team,Gamesplayed,Atbats, runs, hits, doubles, triples, homeruns, rbis
@@ -71,6 +53,9 @@ public class DatabaseHandler {
         }
     }
 
+    /**
+     * Connect to Database
+     */
     private void createConnection() {
         try {
             //Class.forName("org.apache.derby.jdbc.ClientDriver");
@@ -80,10 +65,15 @@ public class DatabaseHandler {
         }
     }
 
-    public boolean execAction(String qu) {
+    /**
+     * Execute insert Statement
+     * @param insertSQL
+     * @return
+     */
+    public boolean insertAction(String insertSQL) {
         try {
             stmt = conn.createStatement();
-            stmt.execute(qu);
+            stmt.execute(insertSQL);
             return true;
 
         } catch (SQLException throwables) {
@@ -92,7 +82,13 @@ public class DatabaseHandler {
         }
         return false;
     }
-    public ResultSet execQuery(String query){
+
+    /**
+     * Return Results from query passed in
+     * @param query
+     * @return
+     */
+    public ResultSet selectResults(String query){
         ResultSet resultSet;
         try{
             stmt = conn.createStatement();
