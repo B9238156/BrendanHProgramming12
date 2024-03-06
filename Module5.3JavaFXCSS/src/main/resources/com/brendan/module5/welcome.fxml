@@ -6,6 +6,6 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.brendan.module5.welcomeController">
    <children>
-      <Text fx:id="Welcome" layoutX="207.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="153.13671875" />
+      <Text fx:id="Welcome" layoutX="207.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dummy" wrappingWidth="153.13671875" />
    </children>
 </AnchorPane>
