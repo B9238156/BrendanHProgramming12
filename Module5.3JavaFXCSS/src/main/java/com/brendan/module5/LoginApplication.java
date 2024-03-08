@@ -7,8 +7,10 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class LoginApplication extends Application {
+    public static DatabaseHandler handler;
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource("login-view.fxml"));
@@ -19,7 +21,13 @@ public class LoginApplication extends Application {
         stage.show();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
+        handler = DatabaseHandler.getHandler();
+        loadData();
         launch();
+    }
+
+    public static void loadData()  {
+        handler.addUser("brendan", "123456") ;
     }
 }

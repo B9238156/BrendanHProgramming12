@@ -33,7 +33,8 @@ public class LoginController {
 
         public void login() throws IOException {
             System.out.println("this will log me in with an id of " + userName.getText() + " and a password of " + password.getText());
-            createNewWindow(userName.getText());
+            System.out.println(handler.);
+            //createNewWindow(userName.getText());
             //System.exit(1);
         }
 
