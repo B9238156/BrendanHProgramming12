@@ -13,8 +13,8 @@ public class LoginApplication extends Application {
     public static DatabaseHandler handler;
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource("login-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource("login.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 425, 240);
         stage.setTitle("Brendan's IT");
         stage.setScene(scene);
         stage.initStyle(StageStyle.UNDECORATED);

@@ -79,7 +79,7 @@ public class DatabaseHandler {
 
     public boolean checkLogin(String ID, String Password) throws SQLException {
         ResultSet resultSet;
-        String query = "SELECT * FROM USERTABLE WHERE ID = " + ID + " AND PASSWORD = " + Password ;
+        String query = "SELECT * FROM USERTABLE WHERE ID = '" + ID + "' AND PASSWORD = '" + Password + "'";
         try{
             stmt = conn.createStatement();
             resultSet = stmt.executeQuery(query);

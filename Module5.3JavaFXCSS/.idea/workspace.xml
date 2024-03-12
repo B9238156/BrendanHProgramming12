@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10e79f2f-c106-43c0-aa58-a7ba2c807bcb" name="Changes" comment="Add Database" />
+    <list default="true" id="10e79f2f-c106-43c0-aa58-a7ba2c807bcb" name="Changes" comment="Add Database">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brendan/module5/AddUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/brendan/module5/add-user.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/brendan/module5/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brendan/module5/DatabaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brendan/module5/DatabaseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brendan/module5/LoginApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brendan/module5/LoginApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brendan/module5/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brendan/module5/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brendan/module5/welcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brendan/module5/welcomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/brendan/module5/Logo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/brendan/module5/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/brendan/module5/login-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/brendan/module5/welcome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/brendan/module5/welcome.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Logo.png" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,27 +48,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.LoginApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/GitHub/BrendanHProgramming12/BrendanHProgramming12/Module4&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "Application.LoginApplication.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/GitHub/BrendanHProgramming12/BrendanHProgramming12/Module5.3JavaFXCSS/src/main/resources/com/brendan/module5",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.JavaFX"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\GitHub\BrendanHProgramming12\BrendanHProgramming12\Module5.3JavaFXCSS" />
       <recent name="C:\GitHub\BrendanHProgramming12\BrendanHProgramming12\Module5.3JavaFXCSS\src\main\resources\com\brendan\module5" />
+      <recent name="C:\GitHub\BrendanHProgramming12\BrendanHProgramming12\Module5.3JavaFXCSS" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\GitHub\BrendanHProgramming12\BrendanHProgramming12\Module5.3JavaFXCSS\src\main\resources\com\brendan\module5" />
       <recent name="C:\GitHub\BrendanHProgramming12\BrendanHProgramming12\Module5.3JavaFXCSS\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -182,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709875313606</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add Database">
+      <option name="closed" value="true" />
+      <created>1709875700367</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1709875700367</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
