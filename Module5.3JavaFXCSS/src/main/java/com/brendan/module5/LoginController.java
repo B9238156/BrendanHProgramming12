@@ -32,8 +32,12 @@ public class LoginController {
             System.exit(1);
         }
 
+    /**
+     * Logs user in with given id and password
+     * @throws IOException
+     * @throws SQLException
+     */
         public void login() throws IOException, SQLException {
-            System.out.println("this will log me in with an id of " + userName.getText() + " and a password of " + password.getText());
             if (DatabaseHandler.handler.checkLogin(userName.getText(), password.getText())) {
                 System.out.println("Password is correct!");
                 createNewWindow(userName.getText());
@@ -42,7 +46,12 @@ public class LoginController {
             }
         }
 
-        public void createNewWindow(String userName) throws IOException {
+    /**
+     * Pop up welcome window
+     * @param userName
+     * @throws IOException
+     */
+    public void createNewWindow(String userName) throws IOException {
             // Create a new stage (window)
             Stage newWindow = new Stage();
             newWindow.setTitle("Welcome");
@@ -53,7 +62,7 @@ public class LoginController {
             // Set the scene
             Scene scene = new Scene(root);
             newWindow.setScene(scene);
-
+            //Set Welcome Message
             Text welcomeTxt = (Text) root.lookup("#Welcome");
             welcomeTxt.setText("Welcome " + userName);
 

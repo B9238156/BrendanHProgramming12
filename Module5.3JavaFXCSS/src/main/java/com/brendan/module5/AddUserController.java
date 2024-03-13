@@ -22,8 +22,12 @@ public class AddUserController {
     @FXML
     private javafx.scene.control.Button cancelButton;
 
+    /**
+     * Add user to database
+     * @throws IOException
+     * @throws SQLException
+     */
     public void addUser() throws IOException, SQLException {
-            System.out.println("this will add me in with an id of " + userName.getText() + " and a password of " + password.getText());
             if (DatabaseHandler.handler.addUser(userName.getText(), password.getText())) {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setContentText("User was Successfully Added!");

@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10e79f2f-c106-43c0-aa58-a7ba2c807bcb" name="Changes" comment="Almost Done">
+    <list default="true" id="10e79f2f-c106-43c0-aa58-a7ba2c807bcb" name="Changes" comment="Everything Works!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/brendan/module5/AddUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brendan/module5/AddUserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/brendan/module5/DatabaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brendan/module5/DatabaseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brendan/module5/LoginApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brendan/module5/LoginApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/brendan/module5/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brendan/module5/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/brendan/module5/add-user.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/brendan/module5/add-user.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/brendan/module5/login-view.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/brendan/module5/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/brendan/module5/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brendan/module5/welcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brendan/module5/welcomeController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +206,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710216117224</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Everything Works!">
+      <option name="closed" value="true" />
+      <created>1710302239651</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1710302239651</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -216,6 +223,7 @@
     <MESSAGE value="Style Completed" />
     <MESSAGE value="Add Database" />
     <MESSAGE value="Almost Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Almost Done" />
+    <MESSAGE value="Everything Works!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Everything Works!" />
   </component>
 </project>

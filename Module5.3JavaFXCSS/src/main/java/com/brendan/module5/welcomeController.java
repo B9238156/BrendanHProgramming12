@@ -10,6 +10,11 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class welcomeController {
+    /**
+     * Pop up addUser prompt
+     * @throws IOException
+     * @throws SQLException
+     */
     public void addUser() throws IOException, SQLException {
         // Create a new stage (window)
         Stage newWindow = new Stage();
@@ -21,10 +26,6 @@ public class welcomeController {
         // Set the scene
         Scene scene = new Scene(root);
         newWindow.setScene(scene);
-
-        //Text welcomeTxt = (Text) root.lookup("#Welcome");
-        //welcomeTxt.setText("Welcome " + userName);
-
 
         // Display the stage
         newWindow.show();

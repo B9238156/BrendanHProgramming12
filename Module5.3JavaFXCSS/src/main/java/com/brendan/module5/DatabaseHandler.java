@@ -25,7 +25,7 @@ public class DatabaseHandler {
 
 
     /**
-     *
+     * Create a table that stores user data.
      */
     private void createUserTable() {
         String TABLE_NAME = "USERTABLE";
@@ -59,7 +59,12 @@ public class DatabaseHandler {
         }
     }
 
-
+    /**
+     * insert a user to the database with given id and password
+     * @param ID
+     * @param Password
+     * @return
+     */
     public boolean addUser(String ID, String Password) {
         String insertSQL = "INSERT INTO USERTABLE VALUES (" +
                 "'" + ID + "'," + "'" + Password + "'" + ")";
@@ -76,7 +81,13 @@ public class DatabaseHandler {
         return false;
     }
 
-
+    /**
+     * CHeck if user id and password exist
+     * @param ID
+     * @param Password
+     * @return
+     * @throws SQLException
+     */
     public boolean checkLogin(String ID, String Password) throws SQLException {
         ResultSet resultSet;
         String query = "SELECT * FROM USERTABLE WHERE ID = '" + ID + "' AND PASSWORD = '" + Password + "'";

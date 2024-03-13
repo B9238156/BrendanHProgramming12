@@ -11,6 +11,12 @@ import java.sql.SQLException;
 
 public class LoginApplication extends Application {
     public static DatabaseHandler handler;
+
+    /**
+     * Start Application
+     * @param stage
+     * @throws IOException
+     */
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource("login.fxml"));
@@ -28,6 +34,6 @@ public class LoginApplication extends Application {
     }
 
     public static void loadData()  {
-        handler.addUser("brendan", "123456") ;
+        handler.addUser("brendan", "1234") ;
     }
 }
