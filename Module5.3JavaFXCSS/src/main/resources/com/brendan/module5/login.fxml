@@ -43,14 +43,14 @@
       </HBox>
         <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="425.0" spacing="10.0" styleClass="innerBox" stylesheets="@style.css">
             <children>
-                <TextField id="cus" fx:id="userName" prefHeight="25.0" prefWidth="159.0" styleClass="new-custom-text-field" stylesheets="@style.css" text="brendan" />
-            <TextField fx:id="password" prefHeight="25.0" prefWidth="161.0" styleClass="new-custom-text-field" stylesheets="@style.css" text="123456" />
+                <TextField id="cus" fx:id="userName" prefHeight="25.0" prefWidth="159.0" styleClass="new-custom-text-field" stylesheets="@style.css" />
+            <TextField fx:id="password" prefHeight="25.0" prefWidth="161.0" styleClass="new-custom-text-field" stylesheets="@style.css" />
             </children>
         </HBox>
         <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="84.0" prefWidth="425.0" spacing="20.0">
             <children>
-                <Button id="button" mnemonicParsing="false" onAction="#login" stylesheets="@style.css" text="Login" />
-                <Button id="button" mnemonicParsing="false" onAction="#exitSystem" stylesheets="@style.css" text="Exit" />
+                <Button id="button" defaultButton="true" mnemonicParsing="false" onAction="#login" stylesheets="@style.css" text="Login" />
+                <Button id="button" cancelButton="true" mnemonicParsing="false" onAction="#exitSystem" stylesheets="@style.css" text="Exit" />
             </children>
         </HBox>
     </children>

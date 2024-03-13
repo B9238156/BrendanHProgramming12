@@ -25,7 +25,7 @@ public class DatabaseHandler {
 
 
     /**
-     * Create Table "PlayerStats" to store data in, catch IOException
+     *
      */
     private void createUserTable() {
         String TABLE_NAME = "USERTABLE";

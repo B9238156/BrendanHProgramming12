@@ -22,7 +22,6 @@ public class LoginController {
         @FXML
         private TextField password;
 
-
         @FXML
         private TextField welcome;
 
